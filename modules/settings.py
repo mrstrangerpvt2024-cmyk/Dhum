@@ -115,12 +115,19 @@ def register_settings_handlers(bot):
         editable = await callback_query.message.edit(
             "**Caption Style 1**\n"
             "✪━━━━━━━★━━━━━━━✪\n"
+            "╭━━━━━━━━━━━╮\n**🎥 VIDEO ID :** {str(count).zfill(3)}.\n╰━━━━━━━━━━━╯\n\n"
+            "**📄 Title : {name1}** ({res}) ᴍʀꜱᴛʀᴀɴɢᴇʀ™.mkv\n\n"
+            "**🔖 Batch :** `{b_name}`\n\n"
+            "**📥 Extracted By :** {CR}"
+            "✪━━━━━━━━━━━━━━━━✪\n\n"
+            "**Caption Style 2**\n"
+            "✪━━━━━━━━━━━━━━━✪\n\n"
             "<b>[🎥]Vid Id</b> : {str(count).zfill(3)}\n"
             "**Video Title :** `{name1} [{res}p].{ext}`\n"
             "<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n"
-            "**Extracted by➤**{CR}\n"
+            "**Extracted by➤**{credit}\n"
             "✪━━━━━━━━━━━━━━━━✪\n\n"
-            "**Caption Style 2**\n"
+            "**Caption Style 3**\n"
             "✪━━━━━━━★━━━━━━━✪\n"
             "**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n"
             "🎞️ **Title** : `{name1}`\n"
@@ -129,11 +136,11 @@ def register_settings_handlers(bot):
             "<blockquote>📚 **Course : {b_name}**</blockquote>\n\n"
             "🌟 **Extracted By : {credit}**\n"
             f"✪━━━━━━━━━━━━━━━━✪\n\n"
-            "**Caption Style 3**\n"
+            "**Caption Style 4**\n"
             f"✪━━━━━━━★━━━━━━━✪\n"
             "<blockquote expandable>**{str(count).zfill(3)}.** {name1} [{res}p].{ext}</blockquote>\n"
             f"✪━━━━━━━━━━━━━━━━✪\n\n"
-            "**Send Your Caption Style eg. /cc1 or /cc2 or /cc3**", reply_markup=keyboard)
+            "**Send Your Caption Style eg. /cc1 or /cc2 or /cc3 or /cc4**", reply_markup=keyboard)
         input_msg = await bot.listen(editable.chat.id)
         try:
             if input_msg.text.lower() == "/cc1":
